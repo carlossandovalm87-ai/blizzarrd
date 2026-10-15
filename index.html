@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blizzard Entertainment: juegos, novedades y Battle.net.">
+    <title>Blizzard Entertainment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./js/main.js" type="module"></script>
+</head>
+<body>
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuMovil" data-bs-toggle="collapse" data-bs-target="#menuMovil">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a class="logo-blizzard" href="#" aria-label="Sitio web de Blizzard">
+                <img src="img/Blizzard_Entertainment-Logo.wine.png" alt="Blizzard">
+            </a>
+
+            <div class="enlaces-navegacion">
+                <a href="#warcraft">Warcraft</a>
+                <a href="#diablo">Diablo</a>
+                <a href="#overwatch">Overwatch</a>
+                <a href="#hearthstone">Hearthstone</a>
+            </div>
+
+            <div class="acciones-navegacion">
+                <a class="info" href="#seccion-battlenet">Información</a>
+                <a class="tienda" href="https://shop.battle.net/">Tienda</a>
+                <a class="account-link" href="https://account.battle.net/">Cuenta</a>
+                <a class="boton-battlenet" href="#seccion-battlenet">Descarga battle.net</a>
+            </div>
+
+            <div class="menu-movil collapse" id="menuMovil">
+                <a href="#warcraft">Warcraft</a>
+                <a href="#diablo">Diablo</a>
+                <a href="#overwatch">Overwatch</a>
+                <a href="#hearthstone">Hearthstone</a>
+                <a href="#seccion-battlenet">Información</a>
+                <a href="https://shop.battle.net/">Tienda</a>
+                <a href="https://account.battle.net/">Cuenta</a>
+                <a href="#seccion-battlenet">Descarga Battle.net</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="portada" aria-label="Campañas destacadas de Blizzard">
+            <div class="carousel slide carousel-fade portada-carrusel" id="portadaCarousel" data-bs-ride="carousel" data-bs-interval="6500" data-bs-pause="hover">
+                <div class="carousel-inner">
+                    <article class="carousel-item active">
+                        <img class="imagen-carrusel" src="img/banner.jpg" alt="" fetchpriority="high">
+                        <div class="contenido-portada">
+                            <img class="logo-portada" src="img/logo_banner.avif" alt="Hearthstone">
+                            <h1 id="titulo-portada">Llévate el lote definitivo de la BlizzCon</h1>
+                            <p class="texto-portada">¡Celebra la BlizzCon con objetos para tus juegos!</p>
+                            <div class="botones-portada">
+                                <a class="boton boton-principal" href="#juegos">Comprar ahora</a>
+                                <a class="boton boton-secundario" href="#juegos">Más información</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carousel-item">
+                        <img class="imagen-carrusel" src="img/dia.jpg" alt="" loading="lazy">
+                        <div class="contenido-portada">
+                            <p class="eyebrow">El infierno te espera</p>
+                            <h2 class="titulo-campana">Diablo IV: Lord of Hatred</h2>
+                            <p class="texto-portada">Enfréntate a la oscuridad en la nueva expansión de Diablo IV.</p>
+                            <div class="botones-portada">
+                                <a class="boton boton-principal" href="#juegos">Descubre Diablo IV</a>
+                                <a class="boton boton-secundario" href="#juegos">Ver juegos</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="carousel-item">
+                        <img class="imagen-carrusel" src="img/midnight.avif" alt="" loading="lazy">
+                        <div class="contenido-portada">
+                            <p class="eyebrow">Una nueva aventura comienza</p>
+                            <h2 class="titulo-campana">World of Warcraft: Midnight</h2>
+                            <p class="texto-portada">Regresa a Azeroth y prepárate para defender tu hogar.</p>
+                            <div class="botones-portada">
+                                <a class="boton boton-principal" href="#juegos">Explora Azeroth</a>
+                                <a class="boton boton-secundario" href="#juegos">Ver juegos</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="portada-efecto" role="button" tabindex="0" aria-label="Cubo de Blizzard de color azul. Arrástralo para moverlo o púlsalo para cambiar el color."></div>
+                <div class="carousel-indicators indicadores-portada">
+                    <button type="button" data-bs-target="#portadaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Campaña BlizzCon"></button>
+                    <button type="button" data-bs-target="#portadaCarousel" data-bs-slide-to="1" aria-label="Diablo IV: Lord of Hatred"></button>
+                    <button type="button" data-bs-target="#portadaCarousel" data-bs-slide-to="2" aria-label="World of Warcraft: Midnight"></button>
+                </div>
+                <button class="carousel-control-prev control-portada" type="button" data-bs-target="#portadaCarousel" data-bs-slide="prev" aria-label="Campaña anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next control-portada" type="button" data-bs-target="#portadaCarousel" data-bs-slide="next" aria-label="Campaña siguiente">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </section>
+
+        <section class="seccion-juegos" id="juegos" aria-labelledby="titulo-juegos">
+            <div class="encabezado-seccion">
+                <div>
+                    <p class="eyebrow">Elige tu aventura</p>
+                    <h2 id="titulo-juegos">Juegos destacados</h2>
+                </div>
+
+                <div class="filtros" aria-label="Filtrar juegos">
+                    <button class="filtro activo" type="button">PC</button>
+                    <button class="filtro" type="button">Consola</button>
+                    <button class="filtro" type="button">Móvil</button>
+                </div>
+            </div>
+
+            <div class="rejilla-juegos">
+                <a class="tarjeta-juego diablo" id="diablo" href="https://diablo4.blizzard.com/es-es/">
+                    <div class="imagen-juego">
+                        <span class="etiqueta">NUEVO</span>
+                        <img src="img/dia.jpg" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>Rol y acción</p>
+                        <h3>Diablo IV: Lord of Hatred</h3>
+                        <span class="plataformas">Battle.net &nbsp; Xbox &nbsp; PlayStation &nbsp; Steam</span>
+                    </div>
+                </a>
+
+                <a class="tarjeta-juego midnight" id="warcraft" href="https://worldofwarcraft.blizzard.com/es-es/">
+                    <div class="imagen-juego">
+                        <span class="etiqueta">NUEVO</span>
+                        <img src="img/midnight.avif" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>MMORPG</p>
+                        <h3>World of Warcraft: Midnight</h3>
+                        <span class="plataformas">Battle.net</span>
+                    </div>
+                </a>
+
+                <a class="tarjeta-juego overwatch" id="overwatch" href="https://overwatch.blizzard.com/es-es/">
+                    <div class="imagen-juego">
+                        <img src="img/ow_nologo.webp" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>Acción por equipos</p>
+                        <h3>Overwatch</h3>
+                        <span class="plataformas">Battle.net &nbsp; Xbox &nbsp; PlayStation &nbsp; Steam</span>
+                    </div>
+                </a>
+
+                <a class="tarjeta-juego hearthstone" id="hearthstone" href="https://hearthstone.blizzard.com/es-es/">
+                    <div class="imagen-juego">
+                        <img src="img/hs_nologo.jpg" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>Juego de cartas de estrategia</p>
+                        <h3>Hearthstone</h3>
+                        <span class="plataformas">Battle.net &nbsp; App Store &nbsp; Google Play</span>
+                    </div>
+                </a>
+
+                <a class="tarjeta-juego diablo-two" href="#">
+                    <div class="imagen-juego">
+                        <span class="etiqueta">NUEVO</span>
+                        <img src="img/diabloll.webp" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>Rol y acción</p>
+                        <h3>Diablo II: Resurrected</h3>
+                        <span class="plataformas">Battle.net &nbsp; Xbox &nbsp; PlayStation</span>
+                    </div>
+                </a>
+
+                <a class="tarjeta-juego warcraft" href="#">
+                    <div class="imagen-juego">
+                        <img src="img/warcraftlll.avif" alt="">
+                    </div>
+                    <div class="informacion-juego">
+                        <p>Estrategia en tiempo real</p>
+                        <h3>Warcraft III: Reforged</h3>
+                        <span class="plataformas">Battle.net</span>
+                    </div>
+                </a>
+            </div>
+
+            <a class="todos-juegos" href="#">Ver todos los juegos</a>
+        </section>
+
+        <section class="seccion-battlenet" id="seccion-battlenet" aria-labelledby="titulo-battlenet">
+            <div class="imagen-battlenet" role="img" aria-label="Colección de objetos de Blizzard"></div>
+            <div class="contenido-battlenet">
+                <img src="img/battlenet.logo.avif" alt="Battle.net" class="logo-battlenet">
+                <h2 id="titulo-battlenet">Descarga Battle.net</h2>
+                <p>Todos tus juegos de Blizzard en un mismo sitio.</p>
+
+                <div class="botones-portada">
+                    <a class="boton boton-principal" href="#">Descargar</a>
+                    <a class="boton boton-secundario" href="#">Más información</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div class="parte-superior-pie">
+            <div class="enlaces-pie">
+                <a href="#">Empleo</a>
+                <a href="#">Información</a>
+                <a href="#">Asistencia</a>
+                <a href="#">Contacto</a>
+                <a href="#">Prensa</a>
+                <a href="#">API</a>
+                <a href="#">Mapa del sitio</a>
+            </div>
+            <a class="language" href="#"> &nbsp; Español (EU) <span aria-hidden="true">⌄</span></a>
+        </div>
+
+        <div class="parte-inferior-pie">
+            <img src="img/Blizzard_Entertainment-Logo.wine.png" alt="Blizzard">
+            <div class="detalles-pie">
+                <p>©2026 Blizzard Entertainment, Inc.</p>
+                <p>Todas las <a href="#">marcas comerciales</a> a las que se hace referencia son propiedad de sus respectivos dueños.</p>
+                <div class="legal">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Legal</a>
+                    <a href="#">Términos</a>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Ajustes de cookies</a>
+                </div>
+            </div>
+            <div class="socials">
+                <a href="#">X</a>
+                <a href="#">f</a>
+                <a href="#">●</a>
+                <a href="#">◎</a>
+                <a href="#">▶</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('#menuMovil a[href^="#"]').forEach((link) => {
+            link.addEventListener('click', () => {
+                bootstrap.Collapse.getOrCreateInstance(document.getElementById('menuMovil')).hide();
+            });
+        });
+    </script>
+</body>
+</html>
